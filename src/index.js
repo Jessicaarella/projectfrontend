@@ -1,17 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom'; // nge-render file JS ke bentuk HTML
+import { BrowserRouter } from "react-router-dom"; // ini biar bisa pindah ke halaman lain (router)
+import './index.css'; // nge-load file index.css untuk styling halaman web
+import App from './App'; // nge-load file App.js
 
+// ini kita diminta untuk nge render Halaman App.js
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <BrowserRouter>
+      <App />
+  </BrowserRouter>,
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
